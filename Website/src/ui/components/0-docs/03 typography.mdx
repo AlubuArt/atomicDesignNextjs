@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Rectangle } from './Rectangle';
+import styles from './Docs.module.scss';
+
+<Meta
+  title='About/Typography'
+/>
+
+# Typography
+
+Typography defines the appearance of text on the elements, e.g. the font family, text size, weight and text-line spacing
+All general and element specifit typograhpy settings are defined as variables in Sass in the `/styles/1-settings/_settings.typography.scss` file.
+
+## Font Family
+
+<Canvas>
+  <Story name="Font Family">
+	<h2>Primary</h2>
+	<div><em>Barlow</em></div>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-light']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-normal']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-medium']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-semibold']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-bold']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-black']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-primary']} fontWeight={styles['font-weight-extrablack']}/>
+	<h2>Secondary</h2>
+	<div><em>Montserrat</em></div>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-light']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-normal']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-medium']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-semibold']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-bold']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-black']}/>
+		<Rectangle text='The quick brown fox jumps over the lazy dog' fontFamily={styles['font-secondary']} fontWeight={styles['font-weight-extrablack']}/>
+  </Story>
+</Canvas>

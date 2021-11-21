@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Rectangle } from './Rectangle';
+import styles from './Docs.module.scss';
+
+<Meta title="About/Colors" viewMode="docs" />
+
+# Colors
+
+Colors are defined as variables in Sass in the `/styles/1-settings/_settings.colors.scss` file.
+The colors file also contains all color definitions for the underlying components.
+
+## Named colors
+
+The named colours are the named brand colors for the site. The colours are typically used for to highlight and accentuate elements on the site.
+
+<Canvas>
+  <Story name="Named Colors">
+	<Rectangle text="Primary" backgroundColor={styles['color-primary']} textColor={styles['color-light']}/>
+	<Rectangle text="Secondary" backgroundColor={styles['color-secondary']} textColor={styles['color-light']}/>
+  </Story>
+</Canvas>
+
+## Base colors
+
+These are the darkest and lightest basic colors.
+
+<Canvas>
+  <Story name="Base Colors">
+	<Rectangle text="Dark" backgroundColor={styles['color-dark']} textColor={styles['color-light']}/>
+	<Rectangle text="Light" backgroundColor={styles['color-light']} textColor={styles['color-dark']}/>
+	<Rectangle text="Athens Gray" backgroundColor={styles['color-athens-gray']} textColor={styles['color-dark']}/>
+	<Rectangle text="French Gray" backgroundColor={styles['color-french-gray']} textColor={styles['color-dark']}/>
+	<Rectangle text="British Gray" backgroundColor={styles['color-british-gray']} textColor={styles['color-dark']}/>
+	<Rectangle text="Storm Gray" backgroundColor={styles['color-storm-gray']} textColor={styles['color-dark']}/>
+	<Rectangle text="Middle Gray" backgroundColor={styles['color-middle-gray']} textColor={styles['color-dark']}/>
+  </Story>
+</Canvas>
+
